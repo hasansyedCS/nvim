@@ -1,1 +1,1 @@
-This is my nvim config.
+vim.opt.number = true
