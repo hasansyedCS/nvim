@@ -1,6 +1,5 @@
 vim.opt.number = true
 vim.g.mapleader = " "
-vim.opt.number = true
 
 -- Install and load Lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -14,6 +13,14 @@ require("lazy").setup({
             "nvim-lua/plenary.nvim",
         },
     },
+
+    {
+	'chomosuke/typst-preview.nvim',
+	lazy = false, -- or ft = 'typst'
+	version = '1.*',
+	opts = {}, -- lazy.nvim will implicitly calls `setup {}`
+},
+
 })
 
 local builtin = require("telescope.builtin")
